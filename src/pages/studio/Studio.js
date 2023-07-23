@@ -24,7 +24,6 @@ export default function Studio() {
             <div className={styles.wrapper}>
                 <div className={styles.main}>
                     <Viewer />
-                    <CapturePanel />
                 </div>
                 <Spacer size={25} orientation="vertical" />
                 <div className={styles.controlPanelWrapper}>
@@ -32,13 +31,7 @@ export default function Studio() {
                 </div>
             </div>
             <footer className={styles.footer}>
-                <img
-                    src="/fotura_logo.jpg"
-                    alt="Fotura Logo"
-                />
-                <div style={{ marginLeft: "10px" }}>
-                    Copyright © 2021 Fotura, Inc. All rights reserved.
-                </div>
+
             </footer>
         </>
     )

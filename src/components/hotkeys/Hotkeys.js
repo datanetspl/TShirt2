@@ -13,11 +13,9 @@ const Hotkeys = () => {
         <div className={s.wrapper}>
             {!animation && (
                 <div className={s.inner}>
-                    <IconWithText
-                        imgSrc={keyR}
-                        imgAlt="rotate"
-                        textContent="Rotate"
-                    />
+                    <p>Press R to Rotate</p>
+
+
                 </div>
             )}
             {decalPath && (

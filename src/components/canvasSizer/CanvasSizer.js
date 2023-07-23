@@ -23,7 +23,7 @@ const CanvasSizer = ({ children }) => {
     }, [canvasSize])
 
     useEffect(() => {
-        setCanvasSize({ name: "Instagram Square", width: 1080, height: 1080 })
+        //setCanvasSize({ name: "Instagram Square", width: 1080, height: 1080 })
     }, [])
 
     return (

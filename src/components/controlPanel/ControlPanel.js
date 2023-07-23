@@ -11,7 +11,7 @@ import Divider from "../divider/Divider"
 import Icon from "../icon/Icon"
 import InputText from "../inputText/InputText"
 import s from "./controlPanel.module.css"
-import { FaShapes } from "react-icons/fa"
+import { FaShapes, FaUpload } from "react-icons/fa"
 var bgData = require("../../constants/bg.json")
 var bgSampleImages = require("../../constants/bgSampleImages.json")
 var propData = require("../../constants/props.json")
@@ -86,19 +86,11 @@ export default function ControlPanel() {
     return (
         <div className={s.wrapper}>
             <div className={s.containerInner}>
-                <Card invisible>
-                    <Button
-                        type="ghost"
-                        text=" Upload Design"
-                        icon={<FaShapes />}
-                        onClick={handleButtonClick}
-                    />
-                    <input
-                        className={s.input}
-                        onInput={() => loadDecal()}
-                        ref={inputRef}
-                        type="file"
-                        accept="image/*"
+                <Card title="T Color">
+                    <ColorPicker
+                        title="Color"
+                        color={modelColor}
+                        setColor={setModelColor}
                     />
                 </Card>
                 <Card title="Background">
@@ -173,46 +165,23 @@ export default function ControlPanel() {
                         </>
                     )}
                 </Card>
-                <Card title="Props">
-                    <div className={s.gridContainer}>
-                        {propData.map((prop) => {
-                            return (
-                                <Icon
-                                    imgSrc={prop.thumb}
-                                    onClick={() => handlePropChange(prop.name)}
-                                    match={props}
-                                    id={prop.name}
-                                    key={prop.name}
-                                />
-                            )
-                        })}
-                    </div>
-                    {props === "prop_text" && (
-                        <>
-                            <Divider style={{ marginBottom: "10px" }} />
-                            <InputText
-                                value={text}
-                                onChange={(value) => setText(value)}
-                                maxLength={14}
-                            />
-                        </>
-                    )}
-                </Card>
-                <Card title="Animate">
-                    <Icon
-                        imgSrc="/thumbs/rotate.svg"
-                        onClick={() => handleAnimation("animation_360")}
-                        match={animation}
-                        id="animation_360"
+                <Card invisible>
+                    <Button
+                        type="ghost"
+                        text=" Upload Design"
+                        icon={<FaUpload />}
+                        onClick={handleButtonClick}
+                    />
+                    <input
+                        //className={s.input}
+                        onInput={() => loadDecal()}
+                        ref={inputRef}
+                        type="file"
+                        accept="image/*"
                     />
                 </Card>
-                <Card title="Product">
-                    <ColorPicker
-                        title="Color"
-                        color={modelColor}
-                        setColor={setModelColor}
-                    />
-                </Card>
+
+
                 {decals.length > 0 && (
                     <Card title="Decals">
                         <DecalManager />

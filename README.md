@@ -1,11 +1,11 @@
-# teeshot :shirt:
+# TShirt2 :shirt:
 
-[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2Fmerch)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2Fteeshot)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2Fmerch)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2FTShirt2)
 
-Teeshot is a tool to create CG images and animations of t-shirt designs.
+TShirt2 is a tool to create CG images and animations of t-shirt designs.
 
 
-[Live Demo](https://teeshot.fotura.co)
+[Live Demo](https://TShirt2.fotura.co)
 
 <img src="./readme_preview.jpg">
 
